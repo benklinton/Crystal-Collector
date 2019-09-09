@@ -1,0 +1,83 @@
+body {
+    background-image: url(https://img.freepik.com/free-vector/dark-stone-cave_1308-22272.jpg?size=626&ext=jpg);
+    background-size: cover;
+}
+.header {
+    color: #BA0018;
+    background-color: #FCC66E;
+    margin: 20px;
+    padding: 10px;
+    width: 20%;
+    margin-left: 10px;
+}
+.body {
+    font-family: 'Chilanka', cursive;
+    color: lightskyblue;
+    background-color: #9876B1;
+    height: 300px;
+    width: 35%;
+    padding: 10px;
+    padding-top: 1px;
+    margin-left: 10px;
+}
+.random-number {
+    color: #CD9803;
+    background-color:#53C8AC;
+    margin: 10px;
+    padding: 20px;
+    width: 20%;
+    height: 100px;
+    margin-left: 10px;
+    font-size: xx-large;
+
+}
+.win-lose {
+    font-family: 'Modak', cursive;
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    color: #DD7482;
+    background-color: #AAD684;
+    margin: 10px;
+    padding: 10px;
+    width: 10%;
+    height: 120px;
+    font-size: x-large;
+}
+.yellow-gem {
+    height: 120px;
+    width: 120px;
+}
+.orange-gem {
+    height: 120px;
+    width: 120px;
+    margin-left: 10px;
+}
+.purple-gem {
+    height: 120px;
+    width: 120px;
+    margin-left: 10px;
+}
+.blue-gem {
+    height: 120px;
+    width: 120px;
+    margin-left: 10px;
+}
+.score-text {
+    font-family: 'Oswald', sans-serif;
+    background-color: #FBF87D;
+    color: #3CAC3B;
+    width: 23%;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+.score-display {
+    background-color: #FBF87D;
+    color: #3CAC3B;
+    width: 20.75%;
+    height: 200px;
+    margin-left: 10px;
+    padding: 20px;
+    font-size: xx-large; 
+
+}
