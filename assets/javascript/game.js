@@ -1,53 +1,74 @@
-$(document).ready(function() {
-    var randomNumber = Math.floor(Math.random()* 120)
-    $("#random-number").text(randomNumber);
+$(document).ready(function () {
+    var randomNumber = Math.floor(Math.random() * 120)
+    $(".random-number").text(randomNumber);
+    var wins = 0;
+    var loses = 0;
     var counter = 0;
     $(".score-display").text(counter);
-    var wins = 0;
-    var loses = 0
     var crystalData = [];
     var crystalNum = 4;
-    for(var i = 0; i < crystalNum; i++) {
-        var crystalValue = Math.floor(Math.random(0)* 12)
+    for (var i = 0; i < crystalNum; i++) {
+        var crystalValue = Math.floor(Math.random() * 12)
         crystalData.push(crystalValue);
     }
+
     console.log(crystalData);
-    $(".yellow-gem").on("click", function(){
+    $(".yellow-gem").on("click", function () {
         counter += crystalData[0];
         $(".score-display").text(counter);
+        winlose();
     })
-    $(".orange-gem").on("click", function() {
-        counter+= crystalData[1];
+    $(".orange-gem").on("click", function () {
+        counter += crystalData[1];
         $(".score-display").text(counter);
+        winlose();
     })
-    $(".purple-gem").on("click", function() {
-        counter+= crystalData[2];
+    $(".purple-gem").on("click", function () {
+        counter += crystalData[2];
         $(".score-display").text(counter);
+        winlose();
     })
-    $(".blue-gem").on("click", function() {
-        counter+= crystalData[3];
+    $(".blue-gem").on("click", function () {
+        counter += crystalData[3];
         $(".score-display").text(counter);
+        winlose();
     })
-
-    if ( counter === randomNumber) {
-        wins++
-        $(".wins").text("" + wins);
-        reset();
-    }
-    else if (counter >= randomNumber) {
-        loses++
-        $(".loses").text("" + loses);
-        reset();
+    var winlose = function () {
+        if (randomNumber === counter) {
+            wins++
+            $(".win").text("Wins: " + wins);
+            randomNumber = Math.floor(Math.random() * 120)
+            $(".random-number").text(randomNumber);
+            crystalData = [];
+            crystalNum = 4;
+            for (var i = 0; i < crystalNum; i++) {
+                crystalValue = Math.floor(Math.random() * 12)
+                crystalData.push(crystalValue);
+            }
+        }
+        else if (randomNumber <= counter) {
+            loses++
+            $(".lose").text("Loses: " + loses);
+            counter = 0;
+            randomNumber = Math.floor(Math.random() * 120)
+            $(".random-number").text(randomNumber);
+            crystalData = [];
+            crystalNum = 4;
+            for (var i = 0; i < crystalNum; i++) {
+                crystalValue = Math.floor(Math.random() * 12)
+                crystalData.push(crystalValue);
+            }
+        }
     }
 })
-
-var reset = function() {
-    var resetRandomNumber = Math.floor(Math.random()* 120);
-    $("#random-number").text(resetRandomNumber);
-    var resetCounter = 0;
-    $(".score-display").text(resetCounter);
-    for(var i = 0; i < crystalNum; i++) {
-        var crystalValue = Math.floor(Math.random(0)* 12)
+var reset = function () {
+    randomNumber = Math.floor(Math.random() * 120)
+    $(".random-number").text(randomNumber);
+    crystalData = [];
+    crystalNum = 4;
+    for (var i = 0; i < crystalNum; i++) {
+        crystalValue = Math.floor(Math.random() * 12)
         crystalData.push(crystalValue);
     }
+
 }

@@ -20,7 +20,7 @@ body {
     padding-top: 1px;
     margin-left: 10px;
 }
-#random-number {
+.random-number {
     color: #CD9803;
     background-color:#53C8AC;
     margin: 10px;
