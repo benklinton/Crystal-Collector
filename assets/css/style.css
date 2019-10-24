@@ -33,8 +33,8 @@ body {
 }
 .win-lose {
     font-family: 'Modak', cursive;
-    position: absolute;
-    bottom: 4.8%;
+    position: relative;
+    bottom: 177px;
     left: 25%;
     color: #DD7482;
     background-color: #AAD684;
@@ -45,25 +45,35 @@ body {
     font-size: x-large;
 }
 .yellow-gem {
+    position: relative;
     height: 120px;
     width: 120px;
+    bottom: 140px;
 }
 .orange-gem {
+    position: relative;
     height: 120px;
     width: 120px;
     margin-left: 10px;
+    bottom: 140px;
 }
 .purple-gem {
+    position: relative;
+    bottom: 140px;
     height: 120px;
     width: 120px;
     margin-left: 10px;
 }
 .blue-gem {
+    position: relative;
+    bottom: 140px;
     height: 120px;
     width: 120px;
     margin-left: 10px;
 }
 .score-text {
+    position: relative;
+    bottom: 120px;
     font-family: 'Oswald', sans-serif;
     background-color: #FBF87D;
     color: #3CAC3B;
@@ -72,6 +82,8 @@ body {
     padding-left: 10px;
 }
 .score-display {
+    position: relative;
+    bottom: 120px;
     background-color: #FBF87D;
     color: #3CAC3B;
     width: 20.75%;
